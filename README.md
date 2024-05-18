@@ -1,1 +1,1 @@
-# eliftech-event-task
+# This is a task for the event at ElifTech
