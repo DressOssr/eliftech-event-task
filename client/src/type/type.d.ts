@@ -13,9 +13,15 @@ export interface Participant{
     dateOfBirth:string;
     heardAbout:string;
     eventId:number;
+    createdAt:string;
 }
 export interface EventWithParticipants extends Event {
     participants: Participants;
 }
 export type Participants = Participant[];
 export type Events = Event[];
+
+export interface EventDto{
+    events: Events;
+    total: number;
+}

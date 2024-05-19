@@ -15,8 +15,9 @@ export class EventsService {
         return await this.eventsModel.bulkCreate(dto);
     }
 
-    async getAllEvents() {
-        return await this.eventsModel.findAll();
+    async getAllEvents(offset: number, limit: number) {
+        const {count: total, rows: events} = await this.eventsModel.findAndCountAll({offset, limit});
+        return {total, events};
     }
 
     findById(eventId: number) {

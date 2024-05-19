@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {api} from "../../api/instance.ts";
-import {Events as EventsType} from "../../type/type";
+import {EventDto, Events as EventsType} from "../../type/type";
 import Event from './event/index'
 import Loader from "../../components/Loader/Loader.tsx";
 
@@ -16,17 +16,39 @@ const Events = () => {
     const [events, setEvents] = useState<EventsType>([])
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [sortOption, setSortOption] = useState<string>('title');
+    const [currentOffset, setCurrentOffset] = useState(0);
     useEffect(() => {
         setIsLoading(true)
-        api.get<EventsType>('/events').then((res) => {
-            setEvents(res.data)
+        api.get<EventDto>(`/events`, {
+            params: {
+                limit: 12,
+                offset: currentOffset
+            }
+        }).then((res) => {
+            setEvents(prev => [...prev, ...res.data.events])
         }).catch((err) => {
             console.log(err)
         }).finally(() => {
             setIsLoading(false)
         })
-    }, [])
-    const handleSort = (option: string) => {
+    }, [currentOffset])
+
+
+    useEffect(() => {
+
+        document.addEventListener('scroll', scrollHandler)
+        return () => document.removeEventListener('scroll', scrollHandler)
+    }, [currentOffset])
+
+    const scrollHandler = () => {
+        if (
+            window.innerHeight + document.documentElement.scrollTop + 1 >=
+            document.documentElement.scrollHeight) {
+            setCurrentOffset(prev => prev + 12);
+        }
+    }
+
+    const sortHandle = (option: string) => {
         setSortOption(option);
     };
 
@@ -54,7 +76,7 @@ const Events = () => {
                     <select
                         id="sort"
                         value={sortOption}
-                        onChange={(e) => handleSort(e.target.value)}
+                        onChange={(e) => sortHandle(e.target.value)}
                         className="mt-1 p-2 border border-gray-300 rounded"
                     >
                         {sortOptions.map((option) =>
@@ -63,21 +85,22 @@ const Events = () => {
                     </select>
                 </div>
             </div>
-            {isLoading
-                ? <div className="flex justify-center p-6m m-6">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+                {getSortedEvents().map((event) => (
+                    <Event
+                        key={event.id}
+                        id={event.id}
+                        title={event.title}
+                        description={event.description}
+                        event_date={event.eventDate}
+                        organizer={event.organizer}
+                    />
+                ))}
+            </div>
+            {isLoading &&
+                <div className="flex justify-center p-6m m-6">
                     <Loader/>
-                </div>
-                : <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-                    {getSortedEvents().map((event) => (
-                        <Event
-                            key={event.id}
-                            id={event.id}
-                            title={event.title}
-                            description={event.description}
-                            event_date={event.eventDate}
-                            organizer={event.organizer}
-                        />
-                    ))}
                 </div>
             }
         </div>

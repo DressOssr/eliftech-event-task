@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "c4dd460e-dd38-4f18-9a8f-598b8aa39475",
+		"name": "ET-school",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24108172"
+	},
+	"item": [
+		{
+			"name": "Add Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"title\": \"Music Festival\",\r\n    \"description\": \"An exciting outdoor music festival featuring various artists.\",\r\n    \"eventDate\": \"2024-06-15\",\r\n    \"organizer\": \"Live Nation\"\r\n  },\r\n  {\r\n    \"title\": \"Tech Conference\",\r\n    \"description\": \"A conference showcasing the latest in technology and innovation.\",\r\n    \"eventDate\": \"2024-07-20\",\r\n    \"organizer\": \"TechWorld\"\r\n  },\r\n  {\r\n    \"title\": \"Art Exhibition\",\r\n    \"description\": \"A display of contemporary art by local and international artists.\",\r\n    \"eventDate\": \"2024-08-05\",\r\n    \"organizer\": \"ArtExpo\"\r\n  },\r\n  {\r\n    \"title\": \"Food Fair\",\r\n    \"description\": \"A fair featuring food from various cultures and cuisines.\",\r\n    \"eventDate\": \"2024-09-12\",\r\n    \"organizer\": \"Culinary Delights\"\r\n  },\r\n  {\r\n    \"title\": \"Marathon\",\r\n    \"description\": \"An annual marathon event open to runners of all levels.\",\r\n    \"eventDate\": \"2024-10-10\",\r\n    \"organizer\": \"RunCity\"\r\n  },\r\n  {\r\n    \"title\": \"Book Fair\",\r\n    \"description\": \"A fair for book lovers with author signings and book sales.\",\r\n    \"eventDate\": \"2024-11-15\",\r\n    \"organizer\": \"BookWorld\"\r\n  },\r\n  {\r\n    \"title\": \"Film Festival\",\r\n    \"description\": \"A festival showcasing independent and international films.\",\r\n    \"eventDate\": \"2024-12-01\",\r\n    \"organizer\": \"CineFest\"\r\n  },\r\n  {\r\n    \"title\": \"Science Fair\",\r\n    \"description\": \"An event for students to present their science projects.\",\r\n    \"eventDate\": \"2024-12-10\",\r\n    \"organizer\": \"Future Scientists\"\r\n  },\r\n  {\r\n    \"title\": \"Charity Gala\",\r\n    \"description\": \"A gala event to raise funds for local charities.\",\r\n    \"eventDate\": \"2024-12-20\",\r\n    \"organizer\": \"Helping Hands\"\r\n  },\r\n  {\r\n    \"title\": \"Winter Wonderland\",\r\n    \"description\": \"A winter-themed event with ice skating, music, and more.\",\r\n    \"eventDate\": \"2024-12-25\",\r\n    \"organizer\": \"Holiday Events\"\r\n  },\r\n  {\r\n    \"title\": \"Jazz Night\",\r\n    \"description\": \"An evening of live jazz music featuring renowned musicians.\",\r\n    \"eventDate\": \"2024-05-25\",\r\n    \"organizer\": \"Jazz Club\"\r\n  },\r\n  {\r\n    \"title\": \"Startup Pitch\",\r\n    \"description\": \"A platform for startups to pitch their ideas to potential investors.\",\r\n    \"eventDate\": \"2024-06-30\",\r\n    \"organizer\": \"Startup Incubator\"\r\n  },\r\n  {\r\n    \"title\": \"Gardening Workshop\",\r\n    \"description\": \"A workshop on sustainable gardening practices and techniques.\",\r\n    \"eventDate\": \"2024-07-10\",\r\n    \"organizer\": \"Green Thumb Society\"\r\n  },\r\n  {\r\n    \"title\": \"Wine Tasting\",\r\n    \"description\": \"A wine tasting event featuring selections from local vineyards.\",\r\n    \"eventDate\": \"2024-08-15\",\r\n    \"organizer\": \"Wine Enthusiasts\"\r\n  },\r\n  {\r\n    \"title\": \"Cooking Class\",\r\n    \"description\": \"A cooking class with a focus on Italian cuisine.\",\r\n    \"eventDate\": \"2024-09-05\",\r\n    \"organizer\": \"Culinary Institute\"\r\n  },\r\n  {\r\n    \"title\": \"Photography Exhibition\",\r\n    \"description\": \"An exhibition showcasing the work of contemporary photographers.\",\r\n    \"eventDate\": \"2024-10-18\",\r\n    \"organizer\": \"PhotoGallery\"\r\n  },\r\n  {\r\n    \"title\": \"Yoga Retreat\",\r\n    \"description\": \"A weekend yoga retreat in a serene natural setting.\",\r\n    \"eventDate\": \"2024-11-02\",\r\n    \"organizer\": \"Wellness Center\"\r\n  },\r\n  {\r\n    \"title\": \"Historical Tour\",\r\n    \"description\": \"A guided tour of the city's historic landmarks.\",\r\n    \"eventDate\": \"2024-12-05\",\r\n    \"organizer\": \"Heritage Tours\"\r\n  },\r\n  {\r\n    \"title\": \"Comedy Show\",\r\n    \"description\": \"A night of laughter with performances by top comedians.\",\r\n    \"eventDate\": \"2024-12-12\",\r\n    \"organizer\": \"Laugh Factory\"\r\n  },\r\n  {\r\n    \"title\": \"Charity Run\",\r\n    \"description\": \"A fun run to raise funds for local charities.\",\r\n    \"eventDate\": \"2024-12-28\",\r\n    \"organizer\": \"Run for a Cause\"\r\n  },\r\n  {\r\n    \"title\": \"Beach Cleanup\",\r\n    \"description\": \"Join us for a day of cleaning up the local beach and protecting marine life.\",\r\n    \"eventDate\": \"2024-06-10\",\r\n    \"organizer\": \"Eco Warriors\"\r\n  },\r\n  {\r\n    \"title\": \"Classical Concert\",\r\n    \"description\": \"An evening of classical music performed by a renowned orchestra.\",\r\n    \"eventDate\": \"2024-06-25\",\r\n    \"organizer\": \"City Symphony\"\r\n  },\r\n  {\r\n    \"title\": \"Robotics Workshop\",\r\n    \"description\": \"A hands-on workshop for kids to learn about robotics and programming.\",\r\n    \"eventDate\": \"2024-07-14\",\r\n    \"organizer\": \"Tech Kids\"\r\n  },\r\n  {\r\n    \"title\": \"Poetry Reading\",\r\n    \"description\": \"An intimate evening of poetry readings by local poets.\",\r\n    \"eventDate\": \"2024-08-02\",\r\n    \"organizer\": \"Literary Circle\"\r\n  },\r\n  {\r\n    \"title\": \"Cycling Tour\",\r\n    \"description\": \"A guided cycling tour through scenic countryside routes.\",\r\n    \"eventDate\": \"2024-09-08\",\r\n    \"organizer\": \"Bike Enthusiasts\"\r\n  },\r\n  {\r\n    \"title\": \"Fashion Show\",\r\n    \"description\": \"A fashion show featuring the latest trends from local designers.\",\r\n    \"eventDate\": \"2024-10-01\",\r\n    \"organizer\": \"Fashion Forward\"\r\n  },\r\n  {\r\n    \"title\": \"Cheese Tasting\",\r\n    \"description\": \"A gourmet cheese tasting event with selections from around the world.\",\r\n    \"eventDate\": \"2024-10-22\",\r\n    \"organizer\": \"Cheese Lovers Club\"\r\n  },\r\n  {\r\n    \"title\": \"Theater Play\",\r\n    \"description\": \"A live theater performance of a classic play.\",\r\n    \"eventDate\": \"2024-11-07\",\r\n    \"organizer\": \"Local Theater Group\"\r\n  },\r\n  {\r\n    \"title\": \"Salsa Night\",\r\n    \"description\": \"An evening of salsa dancing with live music.\",\r\n    \"eventDate\": \"2024-11-20\",\r\n    \"organizer\": \"Dance Society\"\r\n  },\r\n  {\r\n    \"title\": \"Astronomy Night\",\r\n    \"description\": \"A night under the stars with telescopes and guided stargazing.\",\r\n    \"eventDate\": \"2024-12-10\",\r\n    \"organizer\": \"Astronomy Club\"\r\n  },\r\n  {\r\n    \"title\": \"Mountain Hike\",\r\n    \"description\": \"A challenging hike up the local mountain, led by experienced guides.\",\r\n    \"eventDate\": \"2024-05-18\",\r\n    \"organizer\": \"Adventure Club\"\r\n  },\r\n  {\r\n    \"title\": \"Language Exchange\",\r\n    \"description\": \"An opportunity to practice speaking different languages with native speakers.\",\r\n    \"eventDate\": \"2024-06-05\",\r\n    \"organizer\": \"Global Community Center\"\r\n  },\r\n  {\r\n    \"title\": \"Pottery Class\",\r\n    \"description\": \"A beginner's pottery class where you can create your own pieces.\",\r\n    \"eventDate\": \"2024-07-01\",\r\n    \"organizer\": \"Art Studio\"\r\n  },\r\n  {\r\n    \"title\": \"Karaoke Night\",\r\n    \"description\": \"A fun night of karaoke with friends and family.\",\r\n    \"eventDate\": \"2024-08-09\",\r\n    \"organizer\": \"Music Lovers\"\r\n  },\r\n  {\r\n    \"title\": \"Local Market\",\r\n    \"description\": \"A market featuring local artisans, farmers, and crafters.\",\r\n    \"eventDate\": \"2024-09-15\",\r\n    \"organizer\": \"Community Center\"\r\n  },\r\n  {\r\n    \"title\": \"Stand-up Comedy\",\r\n    \"description\": \"An evening of stand-up comedy with performances by local comedians.\",\r\n    \"eventDate\": \"2024-10-03\",\r\n    \"organizer\": \"Comedy Club\"\r\n  },\r\n  {\r\n    \"title\": \"Meditation Retreat\",\r\n    \"description\": \"A weekend retreat focused on meditation and mindfulness.\",\r\n    \"eventDate\": \"2024-10-25\",\r\n    \"organizer\": \"Wellness Group\"\r\n  },\r\n  {\r\n    \"title\": \"Science Workshop\",\r\n    \"description\": \"A hands-on workshop for kids to explore fun science experiments.\",\r\n    \"eventDate\": \"2024-11-18\",\r\n    \"organizer\": \"Science for Kids\"\r\n  },\r\n  {\r\n    \"title\": \"Holiday Craft Fair\",\r\n    \"description\": \"A fair showcasing handmade crafts and gifts for the holiday season.\",\r\n    \"eventDate\": \"2024-12-05\",\r\n    \"organizer\": \"Craft Guild\"\r\n  },\r\n  {\r\n    \"title\": \"New Year's Eve Party\",\r\n    \"description\": \"A celebration to ring in the New Year with music, food, and fireworks.\",\r\n    \"eventDate\": \"2024-12-31\",\r\n    \"organizer\": \"City Events\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventId\":2,\r\n    \"email\":\"test@test.com\",\r\n    \"dateOfBirth\":\"2000-11-18\",\r\n    \"fullName\":\"Test\",\r\n    \"heardAbout\":\"Email\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/participants",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Evvent id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/participants/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"participants",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get event by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/events/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		}
+	]
+}

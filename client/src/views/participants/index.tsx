@@ -66,6 +66,7 @@ const Participants = () => {
                         <Participant key={participant.id} {...participant} />
                     ))}
                 </div>
+
             )}
         </div>
     );
