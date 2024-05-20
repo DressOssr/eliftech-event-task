@@ -1,4 +1,6 @@
 # This is a task for the event at ElifTech
+## DEMO
+https://eliftech-event-task-frontend.onrender.com/
 ## Start in localhost:
  1. Copy the repository
  2. Open client and server folders in terminal
